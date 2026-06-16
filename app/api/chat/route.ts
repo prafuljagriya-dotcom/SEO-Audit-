@@ -1,8 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest, NextResponse } from 'next/server';
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
 const SYSTEM_PROMPT = `You are Praful Jagriya's AI assistant on his personal website. Praful is an SEO + AEO/GEO specialist with 5+ years of experience.
 
 Key facts about Praful:
@@ -25,6 +23,8 @@ Your role:
 export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json();
+
+    const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
     if (!Array.isArray(messages) || messages.length === 0) {
       return NextResponse.json({ error: 'Invalid messages' }, { status: 400 });
