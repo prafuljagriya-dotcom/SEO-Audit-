@@ -3,15 +3,15 @@ export default function About() {
     <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Image placeholder */}
+          {/* Left: Photo */}
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/5] bg-slate-100 rounded-3xl overflow-hidden relative">
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-300">
-                <svg className="w-16 h-16 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <p className="text-sm">Add your photo here</p>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/praful-photo.jpg"
+                alt="Praful Jagriya"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-6 bg-white border border-slate-100 shadow-lg rounded-2xl p-4 flex items-center gap-3">
